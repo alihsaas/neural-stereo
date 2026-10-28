@@ -20,3 +20,7 @@ Fetch the three scenes with `uv run python scripts/download_data.py`.
 ## Classical stereo
 
 I use OpenCV StereoSGBM to match rectified grayscale images. I convert disparity to depth using the scene calibration and measure coverage, bad-pixel rate, and median depth error.
+
+## Tests
+
+Run `uv run pytest -q --basetemp=.pytest-tmp`.
