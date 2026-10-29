@@ -24,3 +24,7 @@ I use OpenCV StereoSGBM to match rectified grayscale images. I convert disparity
 ## Tests
 
 Run `uv run pytest -q --basetemp=.pytest-tmp`.
+
+## Compression study
+
+Run `uv run python scripts/run_compression_study.py` to compare the PNG baseline with JPEG qualities 95, 80, 60, 40, and 20 on the same scenes.
