@@ -72,3 +72,9 @@ the failures sit in flat low-texture regions (lost coverage, wrong patches),
 at depth discontinuities (blocky artifacts shift the matched edge), and in the
 far background, where at small disparity a fraction of a pixel of disparity
 error is a lot of depth.
+
+## Learned stereo
+
+I use FlexGlue v0.1 to match pixels across the rectified pair. I keep matches that pass the model's checks, stay within two pixels of the query row, and fall inside the scene's disparity range.
+
+Install the extra with `uv sync --locked --extra neural` and run `uv run --extra neural python scripts/run_learned_study.py`.
