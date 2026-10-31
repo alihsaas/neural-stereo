@@ -49,12 +49,11 @@ uv sync --extra neural
 uv run pytest -q --basetemp=.pytest-tmp
 ```
 
-Use these commands to run the two studies.
-
-```powershell
-uv run python scripts/run_compression_study.py
-uv run --extra neural python scripts/run_learned_study.py
-```
+`run_study.bat` reproduces the whole study with one command: tests, dataset
+download if missing, the 18 SGBM runs, the 18 FlexGlue runs, and all CSVs and
+figures in `results\`. FlexGlue's weights (and the RoMa v2 refiner it uses)
+download automatically from GitHub releases on first run. I ran stage 2 on an
+RTX 3050 Laptop GPU (4 GB); it also runs on CPU, much more slowly.
 
 ## Dataset
 
